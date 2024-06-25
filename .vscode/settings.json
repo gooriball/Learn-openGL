@@ -1,0 +1,10 @@
+{
+	"files.associations": {
+		"cassert": "cpp"
+	},
+	"cmake.generator": "Visual Studio 17 2022",
+	"cmake.preferredGenerators": [
+	  "Visual Studio 17 2022",
+	  "Ninja"
+	]
+}

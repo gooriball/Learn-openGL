@@ -3,12 +3,15 @@ cmake_minimum_required(VERSION 3.13)
 set(PROJECT_NAME first_opengl_example)
 set(CMAKE_CXX_STANDARD 17)
 
-set(WINDOW_NAME "First OpenGL Example")
-set(WINDOW_WIDTH 960)
-set(WINDOW_HEIGHT 540)
+set(WINDOW_NAME "LearnOpenGL")
+set(WINDOW_WIDTH 800)
+set(WINDOW_HEIGHT 600)
 
 project(${PROJECT_NAME})
-add_executable(${PROJECT_NAME} src/main.cpp)
+add_executable(${PROJECT_NAME}
+	src/main.cpp
+	src/Shader.h src/Shader.cpp
+	src/stb_image.h src/stb_image.cpp)
 
 include(Dependency.cmake)
 

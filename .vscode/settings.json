@@ -1,10 +1,15 @@
 {
 	"files.associations": {
-		"cassert": "cpp"
+		"cassert": "cpp",
+		"xiosbase": "cpp",
+		"iosfwd": "cpp"
 	},
 	"cmake.generator": "Visual Studio 17 2022",
 	"cmake.preferredGenerators": [
 	  "Visual Studio 17 2022",
 	  "Ninja"
-	]
+	],
+	"cmake.debugConfig": {
+		"cwd": "${workspaceFolder}"
+	}
 }

@@ -4,7 +4,6 @@
 out vec4 FragColor;
 
 // 정점 셰이더로부터 전달받은 색상 데이터와 텍스처 좌표 데이터
-in vec3 ourColor;
 in vec2 TexCoord;
 
 // 첫 번째 2D 텍스처 샘플러, 텍스처 유닛0에 바인딩된 텍스처를 참조한다

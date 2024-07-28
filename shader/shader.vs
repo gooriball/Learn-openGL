@@ -3,17 +3,18 @@
 #version 330 core
 // 각각 0,1,2 번째 위치 속성
 layout (location = 0) in vec3 aPos;
-layout (location = 1) in vec3 aColor;
-layout (location = 2) in vec2 aTexCoord;
+layout (location = 1) in vec2 aTexCoord;
 
 // fragment 셰이더에 전달될 색상 데이터와 텍스처 좌표 데이터
-out vec3 ourColor;
 out vec2 TexCoord;
+
+uniform mat4 model;
+uniform mat4 view;
+uniform mat4 projection;
 
 // 정점 셰이더의 메인 함수, 각 정점마다 전부 실행
 void main(void)
 {
-	gl_Position = vec4(aPos, 1.0);
-	ourColor = aColor;
+	gl_Position = projection * view * model * vec4(aPos, 1.0);
 	TexCoord = vec2(aTexCoord.x, aTexCoord.y);
 }
